@@ -4,8 +4,8 @@ import UseWalletConnectHook from "../hooks/UseWalletConnectHook";
 export const WalletConnectionProvider = createContext();
 
 const WalletConnectionContext = ({children}) =>{
-    const {accountaddress,connect} = UseWalletConnectHook();
-    return <WalletConnectionProvider.Provider value={{Accountaddress:accountaddress,ConnectWallet:connect}}>
+    const {accountaddress,loading,isConnected,connect} = UseWalletConnectHook();
+    return <WalletConnectionProvider.Provider value={{Accountaddress:accountaddress,IsConnected:isConnected,Loading:loading,ConnectWallet:connect}}>
         {children}
     </WalletConnectionProvider.Provider>
 }

@@ -1,11 +1,9 @@
-import React,{useState,useContext} from 'react';
+import React,{useState} from 'react';
 import SearchBar from './SearchBar';
-import {WalletConnectionProvider} from '../../context/WalletConnectionContext'
 
 function Navbar() {
     const [flag,setFlag] = useState(true);
     const [sideBar,setSidebar] = useState(true);
-    const {ConnectWallet,Accountaddress} = useContext(WalletConnectionProvider)
     const openSearhbar = () =>{
         if(flag){
             setFlag(false)
@@ -23,9 +21,6 @@ function Navbar() {
         }else{
             setSidebar(true)
         }
-    }
-    const connectWallet = () =>{
-        ConnectWallet()
     }
   return (
     <div className='Navbar p-3 px-6 h-[100px]  bg-slate-50 w-auto '>
@@ -59,12 +54,10 @@ function Navbar() {
                             
                         </div>
                         <div className='flex-col ml-6'>
-                            <p className='font-bold sm:text-lg text-sm font-mono'>Your {Accountaddress === '' ? "Please Connect Your Wallet" : Accountaddress}</p>
                         </div>
                         </div>
                     </div>
                     <div className='p-2 py-16'>
-                        <p className='hover:border-black hover:border-2 hover:bg-emerald-900 rounded-xl active:bg-emerald-900 transition-all duration-300 ' onClick={connectWallet}><i className="fa-solid fa-wallet font-bold text-2xl  p-5 rounded-full transition-all duration-200 text-white"></i></p>
                         <p className='hover:border-black hover:bg-emerald-900 hover:border-2 active:bg-emerald-900  rounded-xl transition-all duration-300'><i className="fa-solid fa-sun font-bold text-2xl text-white  p-5 rounded-full transition-all duration-200"></i></p>
                     </div>
                 </div>
