@@ -1,13 +1,11 @@
 import Web3 from 'web3';
-import { useState,useEffect } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
 
 
 const UseWalletConnectHook = () =>{
     const [accountaddress,setAccoundeAddress] = useState('');
     const [loading,setLoading] = useState(false);
     const [isConnected,setIsConnected] = useState(false);
-    const navigate = useNavigate()
 
     async function connect(){
         setLoading(true);
@@ -33,20 +31,6 @@ const UseWalletConnectHook = () =>{
         }
     }
 
-    const checkConnection = () =>{
-      if(isConnected){
-        navigate('/login')
-      }else if(!isConnected){
-        navigate('/');
-      }
-    }
-    useEffect(()=>{
-        checkConnection();
-    
-        return ()=>{
-          checkConnection();
-        }
-      },[isConnected])
     
     return {accountaddress,loading,isConnected,connect}
 }

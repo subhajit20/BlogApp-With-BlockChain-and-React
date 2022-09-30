@@ -6,7 +6,7 @@ function Main() {
   return (
     <div>
         <Navbar/>
-        <Outlet/>
+        <Outlet/> : 
     </div>
   )
 }

@@ -5,6 +5,8 @@ import Main from '././components/MainComponent/Main';
 import RegistrationComponent from './components/Registration/RegistrationComponent';
 import Login from './components/Registration/Login';
 import Signup from './components/Registration/Signup';
+import UserProfile from './components/user/UserProfile';
+import UserComponents from './components/user/UserComponents';
 
 function App() {
   return (
@@ -15,6 +17,9 @@ function App() {
           <Route element={<RegistrationComponent/>}>
             <Route path="/login" element={<Login/>}/>
             <Route path="/signup" element={<Signup/>}/>
+          </Route>
+          <Route element={<UserComponents/>}>
+              <Route path="/userprofile" element={<UserProfile/>}/> 
           </Route>
         </Route>
       </Routes>
