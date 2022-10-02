@@ -19,11 +19,10 @@ function SideBar({accountaddress}) {
         <div className='username mt-5'>
           <p className='myusername text-xs relative right-2 bg-slate-300 py-1 px-6 rounded-xl shadow-[inset_-12px_-8px_40px_#46464620] font-semibold flex justify-center'>Subhajit Ghosh</p>
         </div>
-          <Link to="/userprofile">Profile</Link>
-          <Link to="/login">Profile</Link>
-        <div>
-
-        </div>
+          <div className='my-5'>
+          <Link to="/userprofile" className='accountaddres text-xs sm:text-xl  relative right-2 rounded-xl hover:bg-red-600 hover:text-white py-2 px-1 sm:py-3 sm:px-4 font-semibold flex justify-center transition-all duration-300 mb-3'>Profile</Link>
+            <Link to="/home" className='accountaddres text-xs sm:text-xl  relative right-2 rounded-xl hover:bg-red-600 hover:text-white py-2 px-1 sm:py-3 sm:px-4 font-semibold flex justify-center transition-all duration-300'>Home</Link>
+          </div>
      </div>
 
     </div>

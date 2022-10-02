@@ -5,10 +5,6 @@ import {WalletConnectionProvider} from '../../context/WalletConnectionContext';
 
 function RegistrationComponent() {
   const {IsConnected} = useContext(WalletConnectionProvider);
-
-  // useEffect(()=>{
-
-  // })
   return (
     <div>
       {

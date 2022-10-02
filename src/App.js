@@ -7,6 +7,8 @@ import Login from './components/Registration/Login';
 import Signup from './components/Registration/Signup';
 import UserProfile from './components/user/UserProfile';
 import UserComponents from './components/user/UserComponents';
+import HomeInterface from './components/HomeComponent/HomeInterface';
+import Home from './components/HomeComponent/Home';
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
           </Route>
           <Route element={<UserComponents/>}>
               <Route path="/userprofile" element={<UserProfile/>}/> 
+          </Route>
+          <Route element={<HomeInterface/>}>
+              <Route path="/home" element={<Home/>}/> 
           </Route>
         </Route>
       </Routes>

@@ -20,13 +20,17 @@ const UseWalletConnectHook = () =>{
                     setLoading(false);
                     setIsConnected(true)
                     setAccoundeAddress(account[0])
-                },2000)
+                },1000)
+
+                return true;
             }else{
                 setTimeout(()=>{
                     setLoading(false)
                     setIsConnected(false)
                     setAccoundeAddress('')
-                },2000)
+                },1000)
+
+                return false;
             }
         }
     }
