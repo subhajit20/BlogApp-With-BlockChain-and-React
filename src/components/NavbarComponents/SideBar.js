@@ -21,6 +21,7 @@ function SideBar({accountaddress}) {
         </div>
           <div className='my-5'>
           <Link to="/userprofile" className='accountaddres text-xs sm:text-xl  relative right-2 rounded-xl hover:bg-red-600 hover:text-white py-2 px-1 sm:py-3 sm:px-4 font-semibold flex justify-center transition-all duration-300 mb-3'>Profile</Link>
+          <Link to="/peoples" className='accountaddres text-xs sm:text-xl  relative right-2 rounded-xl hover:bg-red-600 hover:text-white py-2 px-1 sm:py-3 sm:px-4 font-semibold flex justify-center transition-all duration-300 mb-3'>Peoples</Link>
             <Link to="/home" className='accountaddres text-xs sm:text-xl  relative right-2 rounded-xl hover:bg-red-600 hover:text-white py-2 px-1 sm:py-3 sm:px-4 font-semibold flex justify-center transition-all duration-300'>Home</Link>
           </div>
      </div>
